@@ -8,6 +8,7 @@ body {
   background-color: #2a2a2e;
   color: var(--white-text-color);
   margin: 0 20%;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
 
 /* --------------- FONTS ---------- */
