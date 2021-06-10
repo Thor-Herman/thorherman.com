@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import NavBarElement from './NavBarElement';
+import './NavBar.css';
 
 const NavBar = ({ sectionNames }) => {
   const [activeSection, setActiveSection] = useState(sectionNames[0]);
@@ -12,8 +13,8 @@ const NavBar = ({ sectionNames }) => {
       key={sectionName}
     />
   ));
-  
-  return <li>{sectionElements}</li>;
+
+  return <ul className="navbar">{sectionElements}</ul>;
 };
 
 export default NavBar;

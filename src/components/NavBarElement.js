@@ -5,14 +5,14 @@ function NavBarElement(props) {
   const isActiveElement = props.sectionName === props.activeSection;
   const className = "navbar-element " + (isActiveElement ? "active" : "");
   return (
-    <ul
+    <li
       className={className}
       onClick={() => {
         props.onClick(props.sectionName);
       }}
     >
       {_.capitalize(props.sectionName)}
-    </ul>
+    </li>
   );
 }
 
