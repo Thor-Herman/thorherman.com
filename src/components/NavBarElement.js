@@ -3,7 +3,7 @@ import React from 'react';
 
 function NavBarElement(props) {
   const isActiveElement = props.sectionName === props.activeSection;
-  const className = "navbar-element " + (isActiveElement ? "active" : "");
+  const className = "navbar-element roboto " + (isActiveElement ? "active" : "");
   return (
     <li
       className={className}
