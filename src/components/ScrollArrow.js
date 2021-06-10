@@ -1,8 +1,8 @@
 import React from 'react';
-import {ReactComponent as ScrollArrowSVG} from '../assets/ScrollArrow.svg';
+import { ReactComponent as ScrollArrowSVG } from '../assets/ScrollArrow.svg';
 
 const ScrollArrow = () => {
-    return <ScrollArrowSVG />
+  return <ScrollArrowSVG className={'scroll-arrow'} />;
 };
 
 export default ScrollArrow;

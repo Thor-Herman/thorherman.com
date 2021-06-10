@@ -1,0 +1,44 @@
+.landing-page {
+  height: 100vh;
+  width: inherit;
+}
+
+.welcome-text {
+  position: relative;
+  top: 40%;
+  display: inline-block;
+}
+
+h1 {
+  display: inline-block; /* To ensure blue line only follows the H1 and not the p as well */
+  font-size: 10rem;
+  line-height: 0.9em; /* Font originally has a lot of whitespace */
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+h1:after {
+  display: block;
+  width: 100%;
+  border-top: 1rem solid var(--light-blue-color);
+  content: '';
+}
+
+p {
+  font-size: 5rem;
+  line-height: 0.9em; /* Font originally has a lot of whitespace */
+  margin: 0;
+}
+
+.scroll-arrow {
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.5));
+}
+
+.scroll-arrow:hover {
+  cursor: pointer;
+}
