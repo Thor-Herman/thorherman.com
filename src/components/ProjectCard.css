@@ -4,6 +4,8 @@
 
   text-align: left;
   height: 40%;
+  width: 80%;
+  margin: 3rem auto;
 
   background-color: var(--dark-blue-color);
   border-radius: 1.5rem;
