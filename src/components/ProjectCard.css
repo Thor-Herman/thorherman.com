@@ -1,0 +1,56 @@
+.project-card {
+  display: flex;
+  justify-content: space-evenly;
+
+  text-align: left;
+  height: 40%;
+
+  background-color: var(--dark-blue-color);
+  border-radius: 1.5rem;
+}
+
+.project-card .info {
+  position: relative; /* Because button is absolutely positioned from this container */
+  display: block;
+  margin-left: 2.5rem;
+  flex: 1; /* So that image and info take up equal space */
+}
+
+.project-card .text {
+  padding-top: 20%;
+  margin-right: 30%;
+}
+
+.project-card h3 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.project-card p {
+    font-size: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.project-card button {
+  background-color: var(--light-grey-color);
+  display: block;
+
+  position: absolute;
+  bottom: 10%;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+
+.project-card img {
+  flex: 1; /* So that image and info take up equal space */
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ---------- PROJECT IMAGES ----------- */
+
+.khabu-image {
+    background-color: #FFFFFF;
+    border-radius: 0 1.5rem 1.5rem 0; /* So only one side is rounded */
+}

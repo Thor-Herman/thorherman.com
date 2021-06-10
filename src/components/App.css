@@ -2,6 +2,8 @@
   box-sizing: border-box;
   --white-text-color: #ffffff;
   --light-blue-color: #a4b8ff;
+  --dark-blue-color: #150F38;
+  --light-grey-color: #C4C4C4;
 }
 
 body {
@@ -9,6 +11,19 @@ body {
   color: var(--white-text-color);
   margin: 0 20%;
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}
+
+.button {
+    border-radius: 1rem;
+    border-width: 0;
+    padding: 0.7rem 2rem;
+    font-size: 1em;
+    font-family: inherit;
+    box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.7);
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 /* --------------- FONTS ---------- */
