@@ -25,7 +25,7 @@
 }
 
 .landing-page p {
-  font-size: 5rem;
+  font-size: var(--section-title-size);
   line-height: 0.9em; /* Font originally has a lot of whitespace */
   margin: 0;
 }

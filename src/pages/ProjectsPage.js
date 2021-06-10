@@ -5,7 +5,7 @@ import Khabu from '../assets/khabu.png';
 const ProjectsPage = () => {
   return (
     <section className="projects-page">
-      <p>Personal Projects</p>
+      <p className="section-title">Personal Projects</p>
       <ProjectCard
         title="Khabu"
         description="Real-time multiplayer card game made in React and Spring-Boot."

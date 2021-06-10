@@ -4,6 +4,7 @@
   --light-blue-color: #a4b8ff;
   --dark-blue-color: #150F38;
   --light-grey-color: #C4C4C4;
+  --section-title-size: 5rem;
 }
 
 body {
@@ -24,6 +25,19 @@ body {
 
 .button:hover {
     cursor: pointer;
+}
+
+.section-title {
+    text-align: center;
+    font-size: var(--section-title-size);
+}
+
+.section-title:after {
+  display: block;
+  width: 7%;
+  margin: 0.4rem auto;
+  border-top: 0.4rem solid var(--light-blue-color);
+  content: '';
 }
 
 /* --------------- FONTS ---------- */
