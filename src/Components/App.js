@@ -1,11 +1,12 @@
 import React from 'react';
+import NavBar from './NavBar';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      Hello World
+      <NavBar sectionNames={["Home", "About", "Experience", "Projects", "Contact"]}/>
     </div>
   );
-}
+};
 
 export default App;
