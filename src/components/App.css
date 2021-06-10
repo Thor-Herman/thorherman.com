@@ -1,8 +1,45 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  --white-text-color: #ffffff;
+  --light-blue-color: #a4b8ff;
 }
 
 body {
-    background-color: #2A2A2E;
-    margin: 0 30%;
+  background-color: #2a2a2e;
+  color: var(--white-text-color);
+  margin: 0 20%;
+}
+
+/* --------------- FONTS ---------- */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmSU5fBBc4.woff2)
+    format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+.roboto {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/quicksand/v22/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58a-wg.woff2)
+    format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+.quicksand {
+  font-family: 'Quicksand', Helvetica, sans-serif;
 }
