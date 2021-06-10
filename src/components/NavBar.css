@@ -15,9 +15,9 @@
 }
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 50%;
-  right: 25%;
+  right: 15%;
   transform: translate(0, -50%); /* To center the contents, doesn't support IE8 and below */
 
   list-style: none; /* Remove list bullets */
