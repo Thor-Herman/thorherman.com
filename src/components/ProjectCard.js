@@ -1,5 +1,6 @@
 import React from 'react';
 import './ProjectCard.css';
+import _ from 'lodash';
 
 const ProjectCard = ({ id, title, description, image }) => {
   return (
@@ -11,7 +12,7 @@ const ProjectCard = ({ id, title, description, image }) => {
         </div>
         <button className="button">Read More</button>
       </div>
-      <img src={image} alt={'Image of ' + title} className={title.toLowerCase() + "-image"}/>
+      <img src={image} alt={'Image of ' + title} className={_.kebabCase(title) + "-image"}/>
     </div>
   );
 };
