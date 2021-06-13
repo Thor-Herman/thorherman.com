@@ -4,7 +4,7 @@ import ScrollArrow from '../components/ScrollArrow';
 
 const LandingPage = () => {
   return (
-    <div className={'landing-page'}>
+    <div className={'home-page'}>
       <div className={'welcome-text'}>
         <h1>Hello</h1>
         <p>Welcome to my site</p>
