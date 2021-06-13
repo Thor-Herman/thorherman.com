@@ -19,7 +19,7 @@ const ProjectsPage = () => {
         image={GalaxyShooter}
       />
       <ProjectCard
-        title="thorherman.com"
+        title="This Page"
         description="You're on it right now!"
         image={ThorHerman}
       />
