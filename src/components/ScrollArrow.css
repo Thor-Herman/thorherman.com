@@ -8,6 +8,18 @@
   filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.5));
 }
 
+.scroll-arrow line {
+    stroke: #A4B8FF;
+    stroke-width: 5;
+    transition-property: stroke;
+    transition-duration: 200ms;
+}
+
 .scroll-arrow:hover {
-  cursor: pointer;
+  cursor: pointer;  
+}
+
+.scroll-arrow:hover line {
+    stroke: #bdc7ee;
+    stroke-width: 5.5;
 }
