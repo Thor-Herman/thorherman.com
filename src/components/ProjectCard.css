@@ -46,6 +46,10 @@
   transform: translate(50%, 0);
 }
 
+.project-card button:hover {
+  background-color: var(--light-grey-color-highlighted);
+}
+
 .project-card img {
   width: 100%;
   overflow: hidden;
