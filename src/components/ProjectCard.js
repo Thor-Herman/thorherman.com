@@ -3,7 +3,7 @@ import './ProjectCard.css';
 import _ from 'lodash';
 import Button from './Button';
 
-const ProjectCard = ({ id, title, description, image, isPlayable }) => {
+const ProjectCard = ({ id, title, description, image, playableLink }) => {
   return (
     <div className="project-card">
       <div className="info">
@@ -13,7 +13,7 @@ const ProjectCard = ({ id, title, description, image, isPlayable }) => {
         </div>
         <div className="button-container">
           <Button color="grey" text="Read More" />
-          {isPlayable && <Button color="green" text="Play Now" />}
+          {playableLink && <Button color="green" text="Play Now" link={playableLink} />}
         </div>
       </div>
       <div className={'project-image ' + _.kebabCase(title) + '-image'}>

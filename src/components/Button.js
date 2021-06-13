@@ -3,7 +3,9 @@ import './Button.css';
 
 const Button = (props) => {
   return (
-    <button className={'button pointer-hover ' + props.color}>{props.text}</button>
+    <button className={'button pointer-hover ' + props.color}>
+      <a href={props.link}>{props.text}</a>
+    </button>
   );
 };
 
