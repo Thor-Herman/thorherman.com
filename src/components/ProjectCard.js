@@ -12,7 +12,9 @@ const ProjectCard = ({ id, title, description, image }) => {
         </div>
         <button className="button">Read More</button>
       </div>
-      <img src={image} alt={'Image of ' + title} className={_.kebabCase(title) + "-image"}/>
+      <div className={"project-image " + _.kebabCase(title) + '-image'}>
+        <img src={image} alt={'Image of ' + title} />
+      </div>
     </div>
   );
 };

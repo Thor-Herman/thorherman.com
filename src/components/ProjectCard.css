@@ -47,21 +47,32 @@
 }
 
 .project-card img {
-  flex: 1; /* So that image and info take up equal space */
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
-  border-radius: 0 1.5rem 1.5rem 0; /* So only one side is rounded */
 }
 
-.project-card:nth-child(even) img {
+.project-card .project-image{
+  flex: 1; /* So that image and info take up equal space */
+  border-radius: 0 1.5rem 1.5rem 0; /* So only one side is rounded */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-card:nth-child(even) .project-image {
   border-radius: 1.5rem 0 0 1.5rem;
 }
 
 /* ---------- PROJECT IMAGES ----------- */
 
 .khabu-image {
-  background-color: #ffffff;
+  background-image: linear-gradient(150deg,rgb(59, 53, 53) -20%,rgb(163, 120, 120));
 }
 
 .galaxy-shooter-image {
+  background-image: linear-gradient(140deg,#02264b,#5b96d6);
+}
+
+.thorherman-com-image {
+  background-image: linear-gradient(150deg,#3f3f3f -20%,#202022);
 }
