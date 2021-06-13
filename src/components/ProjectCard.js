@@ -10,7 +10,7 @@ const ProjectCard = ({ id, title, description, image }) => {
           <h3 className="title">{title}</h3>
           <p className="description">{description}</p>
         </div>
-        <button className="button">Read More</button>
+        <button className="button pointer-hover">Read More</button>
       </div>
       <div className={"project-image " + _.kebabCase(title) + '-image'}>
         <img src={image} alt={'Image of ' + title} />
