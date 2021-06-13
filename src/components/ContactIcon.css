@@ -1,0 +1,10 @@
+.contact-icon-container {
+  background-color: var(--light-blue-color);
+  border-radius: 50%;
+  margin: 0 1rem;
+  padding: 0.5rem;
+}
+
+.contact-icon-container:hover {
+    background-color: var(--light-blue-color-highlighted);
+}
