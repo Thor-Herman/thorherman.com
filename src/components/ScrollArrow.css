@@ -1,0 +1,13 @@
+
+.scroll-arrow {
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.5));
+}
+
+.scroll-arrow:hover {
+  cursor: pointer;
+}

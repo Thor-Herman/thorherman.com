@@ -1,6 +1,8 @@
 import React from 'react';
-import { ReactComponent as ScrollArrowSVG } from '../assets/ScrollArrow.svg';
 import { Link } from 'react-scroll';
+
+import { ReactComponent as ScrollArrowSVG } from '../assets/ScrollArrow.svg';
+import './ScrollArrow.css';
 
 const ScrollArrow = ({ elementIdToScrollTo, duration }) => {
   return (
