@@ -6,7 +6,7 @@ import ThorHerman from '../assets/thorherman.com.png';
 
 const ProjectsPage = () => {
   return (
-    <section className="projects-page">
+    <section className="projects-page" id="projects-page">
       <p className="section-title">Personal Projects</p>
       <ProjectCard
         title="Khabu"

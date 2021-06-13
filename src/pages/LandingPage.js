@@ -9,7 +9,7 @@ const LandingPage = () => {
         <h1>Hello</h1>
         <p>Welcome to my site</p>
       </div>
-      <ScrollArrow />
+      <ScrollArrow elementIdToScrollTo="projects-page" duration={300} />
     </div>
   );
 };
