@@ -22,6 +22,17 @@
   width: 100%;
   border-top: 1rem solid var(--light-blue-color);
   content: '';
+  animation-name: slidein;
+  animation-duration: 1s;
+}
+
+@keyframes slidein {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .landing-page p {
