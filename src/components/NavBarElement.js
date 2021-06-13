@@ -8,7 +8,7 @@ function NavBarElement(props) {
   return (
     <li className={className}>
       <Link
-        to={props.sectionName.toLowerCase() + '-page'}
+        to={props.sectionName.toLowerCase() + '-section'}
         smooth={true}
         onClick={() => {
           props.onClick(props.sectionName);

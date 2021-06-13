@@ -4,9 +4,9 @@ import Khabu from '../assets/khabu.png';
 import GalaxyShooter from '../assets/galaxy-shooter.png';
 import ThorHerman from '../assets/thorherman.com.png';
 
-const ProjectsPage = () => {
+const ProjectsSection = () => {
   return (
-    <section className="projects-page" id="projects-page">
+    <section className="projects-section" id="projects-section">
       <p className="section-title">Personal Projects</p>
       <ProjectCard
         title="Khabu"
@@ -27,4 +27,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage;
+export default ProjectsSection;

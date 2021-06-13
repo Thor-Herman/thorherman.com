@@ -5,11 +5,11 @@ import { ReactComponent as Github } from '../assets/github.svg';
 import { ReactComponent as Gmail } from '../assets/gmail.svg';
 import { ReactComponent as LinkedIn } from '../assets/linkedin.svg';
 
-import './ContactPage.css';
+import './ContactSection.css';
 
-const ContactPage = () => {
+const ContactSection = () => {
   return (
-    <section className="contact-page">
+    <section className="contact-section">
       <p className="section-title">Contact</p>
       <div className="icons-container">
         <ContactIcon link="https://github.com/Thor-Herman">
@@ -26,4 +26,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default ContactSection;

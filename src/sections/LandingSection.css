@@ -1,4 +1,4 @@
-.home-page {
+.home-section {
   height: 100vh;
   width: inherit;
 }
@@ -9,7 +9,7 @@
   display: inline-block;
 }
 
-.home-page h1 {
+.home-section h1 {
   display: inline-block; /* To ensure blue line only follows the H1 and not the p as well */
   font-size: 10rem;
   line-height: 0.9em; /* Font originally has a lot of whitespace */
@@ -17,7 +17,7 @@
   margin: 1rem 0;
 }
 
-.home-page h1:after {
+.home-section h1:after {
   display: block;
   width: 100%;
   border-top: 1rem solid var(--light-blue-color);
@@ -35,7 +35,7 @@
   }
 }
 
-.home-page p {
+.home-section p {
   font-size: var(--section-title-size);
   line-height: 0.9em; /* Font originally has a lot of whitespace */
   margin: 0;

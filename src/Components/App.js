@@ -1,18 +1,20 @@
 import React from 'react';
 import NavBar from './NavBar';
-import LandingPage from '../pages/LandingPage';
-import ProjectsPage from '../pages/ProjectsPage';
+import LandingSection from '../sections/LandingSection';
+import ProjectsSection from '../sections/ProjectsSection';
+import ContactSection from '../sections/ContactSection';
 
-import "./App.css";
-import ContactPage from '../pages/ContactPage';
+import './App.css';
 
 const App = () => {
   return (
     <div className="App">
-      <NavBar sectionNames={["Home", "About", "Experience", "Projects", "Contact"]}/>
-      <LandingPage />
-      <ProjectsPage />
-      <ContactPage />
+      <NavBar
+        sectionNames={['Home', 'About', 'Experience', 'Projects', 'Contact']}
+      />
+      <LandingSection />
+      <ProjectsSection />
+      <ContactSection />
     </div>
   );
 };
