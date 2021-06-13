@@ -4,6 +4,7 @@ import LandingPage from '../pages/LandingPage';
 import ProjectsPage from '../pages/ProjectsPage';
 
 import "./App.css";
+import ContactPage from '../pages/ContactPage';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <NavBar sectionNames={["Home", "About", "Experience", "Projects", "Contact"]}/>
       <LandingPage />
       <ProjectsPage />
+      <ContactPage />
     </div>
   );
 };
