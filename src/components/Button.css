@@ -1,0 +1,25 @@
+.button {
+  border-radius: 1rem;
+  border-width: 0;
+  padding: 0.7rem 2rem;
+  font-size: 1em;
+  font-family: inherit;
+  text-align: center;
+  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.7);
+}
+
+.button.grey {
+  background-color: var(--light-grey-color);
+}
+
+.button.grey:hover {
+  background-color: var(--light-grey-color-highlighted);
+}
+
+.button.green {
+  background-color: var(--green-color);
+}
+
+.button.green:hover {
+  background-color: var(--green-color-highlighted);
+}

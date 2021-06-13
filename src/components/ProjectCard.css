@@ -36,18 +36,18 @@
   margin-top: 0.75rem;
 }
 
-.project-card button {
-  background-color: var(--light-grey-color);
-  display: block;
+.project-card .button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   position: absolute;
   bottom: 10%;
-  right: 50%;
-  transform: translate(50%, 0);
+  width: 100%;
 }
 
-.project-card button:hover {
-  background-color: var(--light-grey-color-highlighted);
+.project-card button {
+  margin: 0 1rem;
 }
 
 .project-card img {
@@ -55,7 +55,7 @@
   overflow: hidden;
 }
 
-.project-card .project-image{
+.project-card .project-image {
   flex: 1; /* So that image and info take up equal space */
   border-radius: 0 1.5rem 1.5rem 0; /* So only one side is rounded */
   display: flex;
@@ -70,13 +70,17 @@
 /* ---------- PROJECT IMAGES ----------- */
 
 .khabu-image {
-  background-image: linear-gradient(150deg,rgb(59, 53, 53) -20%,rgb(163, 120, 120));
+  background-image: linear-gradient(
+    150deg,
+    rgb(59, 53, 53) -20%,
+    rgb(163, 120, 120)
+  );
 }
 
 .galaxy-shooter-image {
-  background-image: linear-gradient(140deg,#02264b,#5b96d6);
+  background-image: linear-gradient(140deg, #02264b, #5b96d6);
 }
 
 .this-page-image {
-  background-image: linear-gradient(150deg,#3f3f3f -20%,#202022);
+  background-image: linear-gradient(150deg, #3f3f3f -20%, #202022);
 }

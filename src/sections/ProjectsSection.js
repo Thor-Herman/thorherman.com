@@ -12,16 +12,19 @@ const ProjectsSection = () => {
         title="Khabu"
         description="Real-time multiplayer card game made in React and Spring-Boot."
         image={Khabu}
+        isPlayable={true}
       />
       <ProjectCard
         title="Galaxy Shooter"
         description="2D Unity project based on a Udemy course"
         image={GalaxyShooter}
+        isPlayable={true}
       />
       <ProjectCard
         title="This Page"
         description="You're on it right now!"
         image={ThorHerman}
+        isPlayable={false}
       />
     </section>
   );
