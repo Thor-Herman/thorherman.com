@@ -19,7 +19,10 @@
   top: 50%;
   right: 1.5rem;
   max-height: 40%;
-  transform: translate(0, -50%); /* To center the contents, doesn't support IE8 and below */
+  transform: translate(
+    0,
+    -50%
+  ); /* To center the contents, doesn't support IE8 and below */
 
   display: inline-flex;
   flex-direction: column;
@@ -28,7 +31,7 @@
 }
 
 @media (max-width: 80em) {
-    .navbar {
+  .navbar {
     flex-direction: row;
     align-items: flex-end;
     margin: 0;
@@ -38,6 +41,7 @@
     width: 100%;
     z-index: 1;
     background-color: var(--bg-color);
+    box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.7);
   }
 
   .navbar-element {

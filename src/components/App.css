@@ -32,10 +32,6 @@ section {
   margin: 0 auto;
 }
 
-.box-shadow {
-  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.7);
-}
-
 .pointer-hover:hover {
   cursor: pointer;
 }
@@ -83,6 +79,10 @@ section {
 
   .project-card .info {
     order: 0 !important;
+  }
+
+  .project-card .text {
+    margin: 15% 0 0 0;
   }
 
   .project-card .project-image {
