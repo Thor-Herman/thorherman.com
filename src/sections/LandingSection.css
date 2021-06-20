@@ -14,13 +14,13 @@
   font-size: 10rem;
   line-height: 0.9em; /* Font originally has a lot of whitespace */
   font-weight: bold;
-  margin: 1rem 0;
+  margin: 0.1em 0;
 }
 
 .home-section h1:after {
   display: block;
   width: 100%;
-  border-top: 1rem solid var(--light-blue-color);
+  border-top: 0.1em solid var(--light-blue-color);
   content: '';
   animation-name: slidein;
   animation-duration: 1s;

@@ -7,7 +7,7 @@
 
 .navbar-element.active {
   color: var(--white-text-color);
-  text-shadow: 0 0 3.5px var(--white-text-color);
+  text-shadow: 0 0 0.01rem var(--white-text-color);
 }
 
 .navbar-element:hover {

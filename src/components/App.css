@@ -29,9 +29,9 @@ body {
 
 .section-title:after {
   display: block;
-  width: 7%;
-  margin: 0.4rem auto;
-  border-top: 0.4rem solid var(--light-blue-color);
+  width: 1.5ch;
+  margin: 0.1em auto;
+  border-top: 0.08em solid var(--light-blue-color);
   content: '';
 }
 
