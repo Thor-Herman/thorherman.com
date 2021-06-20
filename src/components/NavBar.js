@@ -14,7 +14,7 @@ const NavBar = ({ sectionNames }) => {
     />
   ));
 
-  return <ul className="navbar">{sectionElements}</ul>;
+  return <ul className="navbar box-shadow">{sectionElements}</ul>;
 };
 
 export default NavBar;

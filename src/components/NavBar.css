@@ -17,7 +17,7 @@
 .navbar {
   position: fixed;
   top: 50%;
-  right: 15%;
+  right: 1.5rem;
   max-height: 40%;
   transform: translate(0, -50%); /* To center the contents, doesn't support IE8 and below */
 
@@ -27,3 +27,26 @@
   list-style: none; /* Remove list bullets */
 }
 
+@media (max-width: 80em) {
+    .navbar {
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0;
+    padding: 2em 0;
+    top: 5%;
+    right: auto;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--bg-color);
+  }
+
+  .navbar-element {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 25em) {
+  .navbar-element {
+    margin: 0 0.5rem; /* TODO: Make hamburger menu */
+  }
+}

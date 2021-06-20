@@ -32,6 +32,10 @@ section {
   margin: 0 auto;
 }
 
+.box-shadow {
+  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.7);
+}
+
 .pointer-hover:hover {
   cursor: pointer;
 }
@@ -73,22 +77,6 @@ section {
     font-size: 6rem;
   }
 
-  .navbar {
-    flex-direction: row;
-    align-items: flex-end;
-    margin: 0;
-    padding: 2em 0;
-    top: 5%;
-    right: auto;
-    width: 100%;
-    z-index: 1;
-    background-color: var(--dark-blue-color);
-  }
-
-  .navbar-element {
-    margin: 0 1em;
-  }
-
   .split {
     flex-direction: column;
   }
@@ -98,8 +86,8 @@ section {
   }
 
   .project-card .project-image {
-    border-radius:  0 0 1.5rem 1.5rem !important;
-  }  
+    border-radius: 0 0 1.5rem 1.5rem !important;
+  }
 }
 
 /* --------------- FONTS ---------- */
