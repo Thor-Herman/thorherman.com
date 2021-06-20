@@ -43,6 +43,11 @@
   width: 100%;
 }
 
+.button-container .button {
+  width: 100%;
+  max-width: 10rem;
+}
+
 .project-card img {
   max-width: 100%;
   overflow: hidden;
