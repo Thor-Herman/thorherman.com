@@ -1,11 +1,12 @@
 .project-card {
-  display: flex;
-  justify-content: space-evenly;
-
   text-align: left;
-  height: 30rem;
-  width: 93%;
+  align-items: stretch;
+
   margin: 3rem auto;
+  width: 100%;
+  max-width: 70rem;
+  min-height: 30rem;
+  font-size: 1.5rem;
 
   background-color: var(--dark-blue-color);
   border-radius: 1.5rem;
@@ -14,7 +15,6 @@
 .project-card .info {
   position: relative; /* Because button is absolutely positioned from this container */
   display: block;
-  flex: 1; /* So that image and info take up equal space */
 }
 
 .project-card:nth-child(even) .info {
@@ -22,18 +22,16 @@
 }
 
 .project-card .text {
-  padding: 20% 0 2.5rem 2.5rem;
+  padding: 0 2.5em;
+  margin: 15% 0;
 }
 
 .project-card h3 {
-  margin: 0;
-  font-size: 3rem;
-  font-weight: bolder;
+  font-size: 2em;
 }
 
 .project-card p {
-  font-size: 1.5rem;
-  margin-top: 0.75rem;
+  margin-top: 0.5em;
 }
 
 .project-card .button-container {
@@ -41,26 +39,21 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  position: absolute;
-  bottom: 10%;
+  padding-block: 3rem;
   width: 100%;
-}
-
-.project-card button {
-  margin: 0 1rem;
 }
 
 .project-card img {
-  width: 100%;
+  max-width: 100%;
   overflow: hidden;
+  padding: 2rem;
 }
 
 .project-card .project-image {
-  flex: 1; /* So that image and info take up equal space */
-  border-radius: 0 1.5rem 1.5rem 0; /* So only one side is rounded */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 0 1.5rem 1.5rem 0; /* So only one side is rounded */
 }
 
 .project-card:nth-child(even) .project-image {

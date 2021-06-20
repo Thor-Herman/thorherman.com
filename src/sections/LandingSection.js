@@ -6,7 +6,7 @@ const LandingSection = () => {
   return (
     <section className={'home-section'}>
       <div className={'welcome-text'}>
-        <h1>Hello</h1>
+        <h1 className="bold">Hello</h1>
         <p>Welcome to my site</p>
       </div>
       <ScrollArrow elementIdToScrollTo="projects-section" duration={300} />

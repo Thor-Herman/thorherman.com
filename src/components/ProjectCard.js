@@ -5,10 +5,10 @@ import Button from './Button';
 
 const ProjectCard = ({ id, title, description, image, playableLink }) => {
   return (
-    <div className="project-card">
+    <div className="project-card split">
       <div className="info">
         <div className="text">
-          <h3 className="title">{title}</h3>
+          <h3 className="title bold">{title}</h3>
           <p className="description">{description}</p>
         </div>
         <div className="button-container">
