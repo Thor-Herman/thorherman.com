@@ -1,3 +1,5 @@
+body, h1, h2, h3, p { margin: 0; } 
+
 * {
   box-sizing: border-box;
   --white-text-color: #ffffff;
@@ -14,8 +16,12 @@
 body {
   background-color: #2a2a2e;
   color: var(--white-text-color);
-  margin: 0 20%;
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}
+
+section {
+  width: min(85%, 80rem);
+  margin: 0 auto;
 }
 
 .pointer-hover:hover {
