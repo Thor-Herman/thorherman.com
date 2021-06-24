@@ -33,15 +33,20 @@
 @media (max-width: 80em) {
   .navbar {
     flex-direction: row;
-    align-items: flex-end;
-    margin: 0;
-    padding: 2em 0;
-    top: 5%;
-    right: auto;
+    align-items: center;
+    padding: 1em 0;
     width: 100%;
     z-index: 1;
-    background-color: var(--bg-color);
+    background-color: var(--dark-grey-color);
     box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.7);
+    border-bottom: var(--light-blue-color);
+    border-bottom-style: groove;
+
+    /* Removes previous modifications */
+    margin: 0;
+    top: 0;
+    right: 0;
+    transform: none;
   }
 
   .navbar-element {
