@@ -9,7 +9,7 @@ const ProjectCard = ({ id, title, description, image, playableLink }) => {
       <div className="info">
         <div className="text">
           <h3 className="title bold">{title}</h3>
-          <p className="description">{description}</p>
+          <p className="description italic">{description}</p>
         </div>
         <div className="button-container">
           <Button color="grey" text="Read More" />

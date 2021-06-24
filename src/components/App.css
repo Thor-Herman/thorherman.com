@@ -29,7 +29,7 @@ body {
 }
 
 section {
-  width: min(90%, 80rem);
+  width: min(95%, 75rem);
   margin: 0 auto;
 }
 
@@ -64,6 +64,10 @@ section {
   font-weight: bolder;
 }
 
+.italic {
+  font-style: italic;
+}
+
 /* --------- MEDIA QUERIES ---------- */
 @media (max-width: 40em) {
   :root {
@@ -78,16 +82,25 @@ section {
     flex-direction: column;
   }
 
+  .button {
+    width: auto !important;
+  }
+
   .project-card .info {
-    order: 0 !important;
+    order: 1 !important;
   }
 
   .project-card .text {
-    margin: 15% 0 0 0;
+    margin: 0.8rem 0 0 0;
+    padding: 0 1em;
+  }
+
+  .project-card .button-container {
+    padding-block: 1.6rem;
   }
 
   .project-card .project-image {
-    border-radius: 0 0 1.5rem 1.5rem !important;
+    border-radius: 1.5rem 1.5rem 0 0 !important;
   }
 }
 
