@@ -38,6 +38,8 @@ section {
 }
 
 .section-title {
+  padding-top: 0.48em;
+  padding-bottom: 0.12em;
   text-align: center;
   font-size: var(--section-title-size);
 }
