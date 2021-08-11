@@ -2,6 +2,10 @@ body,
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
+ul,
 p {
   margin: 0;
 }
@@ -52,6 +56,23 @@ section {
   content: '';
 }
 
+h4 {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: vertical;
+}
+
+.flex {
+  display: flex;
+}
+
 .split {
   display: flex;
   flex-direction: row;
@@ -68,6 +89,14 @@ section {
 
 .italic {
   font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.rounded-corner {
+  border-radius: 1.5rem;
 }
 
 /* --------- MEDIA QUERIES ---------- */
