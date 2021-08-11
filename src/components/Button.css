@@ -2,7 +2,6 @@
   border-radius: 1em;
   border-width: 0;
   padding: 0.75em 2em;
-  margin: 0.5em 1em;
   font-size: 1rem;
   font-family: inherit;
   box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.7);
@@ -12,6 +11,19 @@
   appearance: button;
   text-decoration: none;
   color: initial;
+}
+
+.button.none {
+  background-color: transparent;
+  color: white /* For underline color */;
+}
+
+.button.none a {
+  color: white;
+}
+
+.button.none:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .button.grey {
