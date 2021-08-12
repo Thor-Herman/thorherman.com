@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './Button';
 import './ProjectModal.css';
 import Khabu from '../assets/khabu.png';
+import IconButton from './IconButton';
 
 const ProjectModal = ({ active }) => {
   if (!active) return null;
@@ -10,7 +11,7 @@ const ProjectModal = ({ active }) => {
       <div className="modal">
         <div className="">
           <div className="image-container">
-            <svg viewBox="0 0 100 100">
+            <svg id="circular-project-image" viewBox="0 0 100 100">
               <clipPath id="myClip">
                 <circle cx="25" cy="35" r="50" />
               </clipPath>
@@ -85,6 +86,7 @@ const ProjectModal = ({ active }) => {
             />
           </div>
         </div>
+        <IconButton type="close"/>
       </div>
     </div>
   );
