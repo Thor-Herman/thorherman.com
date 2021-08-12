@@ -3,7 +3,7 @@ import Button from './Button';
 import './ProjectModal.css';
 import Khabu from '../assets/khabu.png';
 import IconButton from './IconButton';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import client from '../api/sanityClient';
 import CircularProjectImage from './CircularProjectImage';
 
@@ -12,6 +12,8 @@ const ProjectModal = ({ active }) => {
   const [descriptionBlocks, setDescriptionBlocks] = useState([]);
   const [URL, setURL] = useState(['']);
   const [technologies, setTechnologies] = useState([]);
+
+  const history = useHistory();
 
   const query = "*[_type == 'project' && name == 'Khabu']";
 
@@ -63,7 +65,7 @@ const ProjectModal = ({ active }) => {
             />
           </div>
         </div>
-        <IconButton type="close" size="large" />
+        <IconButton type="close" size="large" onClick={() => history.push('/') }/>
       </div>
     </div>
   );
