@@ -5,6 +5,7 @@ import GalaxyShooter from '../assets/galaxy-shooter.png';
 import ThorHerman from '../assets/thorherman.com.png';
 
 import './ProjectsSection.css';
+import ProjectModal from '../components/ProjectModal';
 
 const ProjectsSection = () => {
   return (
@@ -28,6 +29,7 @@ const ProjectsSection = () => {
           description="You're on it right now!"
           image={ThorHerman}
         />
+        <ProjectModal active={true} />
       </div>
     </section>
   );

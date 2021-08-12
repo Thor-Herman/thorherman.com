@@ -1,0 +1,62 @@
+.project-modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 85%;
+  background-color: #030013;
+  display: grid;
+  grid-template-columns: auto auto;
+  overflow: hidden;
+}
+
+.modal-description {
+  overflow-y: auto;
+  max-width: 100%;
+  max-height: 70%;
+}
+
+.modal-second-column {
+  padding-right: 6rem;
+  height: 100%;
+}
+
+.modal-second-column h1 {
+  padding-top: 2.5rem;
+}
+
+.modal-buttons {
+  position: absolute;
+  bottom: 2rem;
+  right: 6rem;
+}
+
+svg {
+  height: 20rem;
+  width: 20rem;
+  background-image: 'https://www.amrita.edu/sites/default/files/news-images/new/news-events/images/l-nov/grass.jpg';
+}
+
+.technologies {
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.technologies ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+}
+
+.technologies li {
+  padding: 0.3rem 0;
+}
