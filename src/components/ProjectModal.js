@@ -1,12 +1,39 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from './Button';
 import './ProjectModal.css';
 import Khabu from '../assets/khabu.png';
 import IconButton from './IconButton';
+import { useParams } from 'react-router-dom';
+import client from '../api/sanityClient';
 
 const ProjectModal = ({ active }) => {
-  const [isActive, setIsActive] = useState(active);
-  if (!isActive) return null;
+  const [title, setTitle] = useState('');
+  const [descriptionBlocks, setDescriptionBlocks] = useState([]);
+  const [URL, setURL] = useState(['']);
+  const [technologies, setTechnologies] = useState([]);
+
+  const query = "*[_type == 'project' && name == 'Khabu']";
+  useEffect(() => {
+    client.fetch(query).then((result) => {
+      setTitle(result[0].name);
+      setDescriptionBlocks(result[0].description);
+      setTechnologies(result[0].technologies);
+      setURL(result[0].URL);
+    });
+  }, [query]);
+
+  const { id } = useParams();
+
+  if (!id) return null;
+
+  const description = descriptionBlocks.map((block) => (
+    <p>
+      {block.children[0].text} <br /><br/>
+    </p>
+  ));
+
+  // const [isActive, setIsActive] = useState(active);
+  // if (!isActive) return null;
   return (
     <div className="project-modal-bg">
       <div className="modal">
@@ -37,49 +64,17 @@ const ProjectModal = ({ active }) => {
           <div className="technologies">
             <h4 className="underline">Technologies</h4>
             <ul>
-              <li>React</li>
-              <li>Redux</li>
-              <li>Spring Boot</li>
-              <li>AWS EBS</li>
-              <li>AWS CodePipeline</li>
-              <li>Websockets</li>
+              {technologies.map((tech) => (
+                <li key={tech}>{tech}</li>
+              ))}
             </ul>
           </div>
         </div>
         <div className="modal-second-column">
-          <h1 className="bold">KHABU</h1>
-          <p className="modal-description">
-            After our summer internships for 2020 were cancelled due to the outbreak
-            of COVID-19, a friend and I applied to Netlight's summer sprint
-            initiative. The initiative was started as a response to the many
-            internship cancellations students were experiencing. Netlight offered to
-            help those who wanted to work on a personal and technical project
-            throughout the summer by arranging weekly standups and having experienced
-            consultants at disposal. My friend and I had previously talked about
-            creating a digitalized version of our favorite card-game, 'Khabu'. This
-            seemed like the perfect opportunity to realize those plans.
-            <br />
-            <br />
-            We worked from june to august, with me on the frontend and my friend
-            working backend. The stack we had chosen was React Redux and Spring Boot,
-            mainly due to the fact that we were somewhat familiar with them. Upon
-            researching more, and through encouragement from the consultants, we also
-            utilized AWS EBS and CodePipeline. The project started with sketching the
-            flow of the game through different charts, and creating a mockup in
-            Figma. Notion was also utilized as our workspace, in order to keep track
-            of issues, and to keep all documentation in one place. Since the work was
-            unpaid, we did not have a strict schedule. However, we worked from
-            somewhere around 6-8 hours a day on the weekdays. In the end, we achieved
-            most of the essential functionality of the card-game, with the hopes of
-            someday adding 4-player mode...
-          </p>
+          <h1 className="bold">{title}</h1>
+          <p className="modal-description">{description}</p>
           <div className="modal-buttons flex">
-            <Button
-              text="Github Repo"
-              link="https://github.com/SondreODahl/khabu"
-              color="none"
-              type="underline"
-            />
+            <Button text="Github Repo" link={URL} color="none" type="underline" />
             <Button
               text="Play Now"
               link="http://www.thorherman.com/play.html"
@@ -87,7 +82,7 @@ const ProjectModal = ({ active }) => {
             />
           </div>
         </div>
-        <IconButton type="close" size="large" onClick={() => setIsActive(!isActive)}/>
+        <IconButton type="close" size="large" />
       </div>
     </div>
   );
