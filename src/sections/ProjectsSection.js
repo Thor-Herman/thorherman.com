@@ -29,7 +29,6 @@ const ProjectsSection = () => {
           description="You're on it right now!"
           image={ThorHerman}
         />
-        <ProjectModal active={true} />
       </div>
     </section>
   );
