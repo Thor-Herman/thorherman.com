@@ -60,3 +60,9 @@
 .technologies li {
   padding: 0.3rem 0;
 }
+
+.modal .icon-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}

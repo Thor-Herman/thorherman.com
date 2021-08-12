@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
 import './ProjectModal.css';
 import Khabu from '../assets/khabu.png';
 import IconButton from './IconButton';
 
 const ProjectModal = ({ active }) => {
-  if (!active) return null;
+  const [isActive, setIsActive] = useState(active);
+  if (!isActive) return null;
   return (
     <div className="project-modal-bg">
       <div className="modal">
@@ -86,7 +87,7 @@ const ProjectModal = ({ active }) => {
             />
           </div>
         </div>
-        <IconButton type="close"/>
+        <IconButton type="close" size="large" onClick={() => setIsActive(!isActive)}/>
       </div>
     </div>
   );

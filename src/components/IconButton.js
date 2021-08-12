@@ -6,7 +6,7 @@ const svgTypes = {
   close: <Close />,
 };
 
-const IconButton = ({ type, size="small" }) => {
+const IconButton = ({ type, size="small", onClick }) => {
   const [isBeingHovered, setIsBeingHovered] = useState(false); // :hover property doesn't seem to work with a lower z-index
   const bgClassName = isBeingHovered ? 'background hovered' : 'background';
 
@@ -15,6 +15,7 @@ const IconButton = ({ type, size="small" }) => {
       <button
         onMouseLeave={() => setIsBeingHovered(false)}
         onMouseEnter={() => setIsBeingHovered(true)}
+        onClick={() => onClick()}
         className={"icon-button pointer-hover " + size}
       >
         {svgTypes[type]}
