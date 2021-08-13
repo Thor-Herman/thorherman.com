@@ -12,21 +12,24 @@ const ProjectModal = ({ active }) => {
   const [descriptionBlocks, setDescriptionBlocks] = useState([]);
   const [URL, setURL] = useState(['']);
   const [technologies, setTechnologies] = useState([]);
+  const [image, setImage] = useState('');
 
   const history = useHistory();
 
-  const query = "*[_type == 'project' && name == 'Khabu']";
+  const { id } = useParams();
 
   useEffect(() => {
-    client.fetch(query).then((result) => {
+    const query =
+      "*[_type == 'project' && slug.current == $id] {name, \"imageUrl\": image.asset->url, description, technologies, URL}";
+    const params = { id };
+    client.fetch(query, params).then((result) => {
       setTitle(result[0].name);
       setDescriptionBlocks(result[0].description);
       setTechnologies(result[0].technologies);
       setURL(result[0].URL);
+      setImage(result[0].imageUrl)
     });
-  }, [query]);
-
-  const { id } = useParams();
+  }, [id]);
 
   if (!id) return null;
 
@@ -42,7 +45,7 @@ const ProjectModal = ({ active }) => {
       <div className="modal">
         <div className="">
           <div className="image-container">
-            <CircularProjectImage image={Khabu} />
+            <CircularProjectImage image={image} />
           </div>
           <div className="technologies">
             <h4 className="underline">Technologies</h4>
@@ -65,7 +68,7 @@ const ProjectModal = ({ active }) => {
             />
           </div>
         </div>
-        <IconButton type="close" size="large" onClick={() => history.push('/') }/>
+        <IconButton type="close" size="large" onClick={() => history.push('/')} />
       </div>
     </div>
   );
