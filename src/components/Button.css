@@ -1,5 +1,10 @@
+a {
+  text-decoration: none;
+}
 .button {
+  appearance: button;
   border-radius: 1em;
+  color: initial;
   border-width: 0;
   padding: 0.75em 2em;
   font-size: 1rem;
@@ -7,9 +12,7 @@
   box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.7);
 }
 
-.button a {
-  appearance: button;
-  text-decoration: none;
+.button:active {
   color: initial;
 }
 
@@ -25,7 +28,7 @@
   color: white;
 }
 
-.button.outlined a {
+.button.outlined {
   color: white;
 }
 
@@ -34,7 +37,7 @@
   color: white /* For underline color */;
 }
 
-.button.none a {
+.button.none {
   color: white;
 }
 
@@ -44,7 +47,7 @@
 
 .button.grey {
   background-color: var(--light-grey-color);
-  border-color: var(--light-grey-color);;
+  border-color: var(--light-grey-color);
 }
 
 .button.grey:hover {
