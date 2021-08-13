@@ -14,7 +14,9 @@ const App = () => {
           <LandingPage />
         </Route>
         <Route path="/modal/:id">
-          <ProjectModal/>
+          <div className="project-modal-bg">
+            <ProjectModal />
+          </div>
         </Route>
       </BrowserRouter>
     </div>
