@@ -14,7 +14,7 @@ const ProjectCard = ({ url, title, description, image, playableLink }) => {
         </div>
         <div className="button-container">
           <Link to={'modal/' + url}>
-            <Button color="grey" text="Read More" />
+            <Button color="grey" text="Read More" type="outlined" />
           </Link>
           {playableLink && (
             <Button color="green" text="Play Now" link={playableLink} />

@@ -13,6 +13,22 @@
   color: initial;
 }
 
+.button:hover {
+  text-decoration: underline;
+}
+
+.button.outlined {
+  border-style: solid;
+  border-width: 0.2rem;
+  outline: none;
+  background-color: transparent !important;
+  color: white;
+}
+
+.button.outlined a {
+  color: white;
+}
+
 .button.none {
   background-color: transparent;
   color: white /* For underline color */;
@@ -28,16 +44,20 @@
 
 .button.grey {
   background-color: var(--light-grey-color);
+  border-color: var(--light-grey-color);;
 }
 
 .button.grey:hover {
   background-color: var(--light-grey-color-highlighted);
+  border-color: var(--light-grey-color-highlighted);
 }
 
 .button.green {
   background-color: var(--green-color);
+  border-color: var(--green-color);
 }
 
 .button.green:hover {
   background-color: var(--green-color-highlighted);
+  border-color: var(--green-color-highlighted);
 }
