@@ -16,7 +16,7 @@ const CircularProjectImage = ({image}) => {
         <image
           transform="rotate(30, 50, 20)"
           width="120"
-          height="auto"
+          height="100%"
           x="-25"
           y="0"
           href={image}

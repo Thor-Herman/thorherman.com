@@ -55,7 +55,7 @@
 
 .modal-buttons {
   padding: 1rem 5rem 1rem 0;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .modal-buttons .button {
