@@ -75,7 +75,7 @@ h4 {
 
 .flex-vertical {
   display: flex;
-  flex-direction: vertical;
+  flex-direction: column;
 }
 
 .flex {

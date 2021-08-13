@@ -16,31 +16,28 @@ const ProjectModalBody = ({
   const history = useHistory();
   return (
     <div className="modal">
-      <div className="modal-first-column">
-        <div className="image-container">
-          <CircularProjectImage image={imageUrl} />
+      <div className="modal-grid">
+        <div className="modal-first-column">
+          <div className="image-container">
+            <CircularProjectImage image={imageUrl} />
+          </div>
+          <div className="technologies">
+            <h4 className="underline">Technologies</h4>
+            <ul>{technologiesJSX}</ul>
+          </div>
         </div>
-        <div className="technologies">
-          <h4 className="underline">Technologies</h4>
-          <ul>
-            {technologiesJSX}
-          </ul>
-        </div>
-      </div>
-      <div className="modal-second-column">
-        <h1 className="bold">{name}</h1>
-        <p className="modal-description">{descriptionJSX}</p>
-        <div className="modal-buttons flex">
-          <Button
-            text="Github Repo"
-            link={githubURL}
-            color="none"
-            type="underline"
-          />
-          {playable && <Button text="Play Now" link={playURL} color="green" />}
+        <div className="modal-second-column">
+          <div className="modal-title flex-vertical">
+            <IconButton type="close" size="large" onClick={() => history.push('/')} />
+            <h1 className="bold">{name}</h1>
+          </div>
+          <p className="modal-description">{descriptionJSX}</p>
         </div>
       </div>
-      <IconButton type="close" size="large" onClick={() => history.push('/')} />
+      <div className="modal-buttons flex">
+        <Button text="Github Repo" link={githubURL} color="none" type="underline" />
+        {playable && <Button text="Play Now" link={playURL} color="green" />}
+      </div>
     </div>
   );
 };
