@@ -8,6 +8,7 @@ import client from '../api/sanityClient';
 import CircularProjectImage from './CircularProjectImage';
 
 const ProjectModal = ({ active }) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [title, setTitle] = useState('');
   const [descriptionBlocks, setDescriptionBlocks] = useState([]);
   const [URL, setURL] = useState(['']);
@@ -19,6 +20,7 @@ const ProjectModal = ({ active }) => {
   const { id } = useParams();
 
   useEffect(() => {
+    setIsLoading(true);
     const query =
       "*[_type == 'project' && slug.current == $id] {name, \"imageUrl\": image.asset->url, description, technologies, URL}";
     const params = { id };
@@ -29,9 +31,10 @@ const ProjectModal = ({ active }) => {
       setURL(result[0].URL);
       setImage(result[0].imageUrl)
     });
+    setIsLoading(false);
   }, [id]);
 
-  if (!id) return null;
+  if (!id || isLoading) return null;
 
   const description = descriptionBlocks.map((block) => (
     <p>
