@@ -9,6 +9,7 @@
 }
 
 .modal {
+  animation: 0.45s ease-out 0s 1 slidein;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -19,6 +20,15 @@
   display: grid;
   grid-template-columns: auto auto;
   overflow: hidden;
+}
+
+@keyframes slidein {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 50%;
+  }
 }
 
 .modal-description {
