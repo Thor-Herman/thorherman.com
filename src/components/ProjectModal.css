@@ -17,7 +17,8 @@
   width: 60rem;
   height: 50rem;
   background-color: #030013;
-  overflow: hidden;
+  overflow-y: auto;
+  justify-content: space-between;
 }
 
 .modal-grid {
@@ -37,15 +38,13 @@
 .modal-description {
   overflow-y: auto;
   max-width: 100%;
-  height: 32rem;
   padding-right: 6rem;
 }
 
 .modal-title .icon-button {
-  position: absolute; 
+  position: absolute;
   top: 1rem;
   right: 1rem;
-  padding: 1rem 0;
 }
 
 .modal-title h1 {
@@ -54,7 +53,7 @@
 }
 
 .modal-buttons {
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 5rem 1rem 0;
   justify-content: end;
 }
 
@@ -89,10 +88,6 @@
     height: 100%;
   }
 
-  .modal-description {
-    height: 40rem;
-  }
-
   #circular-project-image {
     height: 15rem;
     width: 15rem;
@@ -100,21 +95,23 @@
 }
 
 @media (max-width: 40rem) {
-
-  .modal-title .icon-button { /* Put button in right corner above title */
+  .modal-title .icon-button {
+    /* Put button in right corner above title */
     position: relative;
     align-self: flex-end;
+    padding: 1rem 0;
+    top: 0 !important;
+    right: 0 !important;
   }
 
   .modal {
-    overflow-y: auto;
     animation: none !important;
   }
 
   .modal-title h1 {
     padding-right: 0 !important;
   }
-  
+
   .modal-grid {
     display: flex;
     flex-direction: column-reverse; /* To make technologies come after description */
@@ -125,18 +122,22 @@
     padding: 0 2rem;
   }
 
-  #circular-project-image {
-    display: none; /* Remove image on mobile */
-  }
-
   .modal-description {
     height: auto;
     padding: 0 !important;
+  }
+
+  #circular-project-image {
+    display: none; /* Remove image on mobile */
   }
 }
 
 @media (max-width: 50rem) {
   .modal-description {
+    padding-right: 2rem;
+  }
+
+  .modal-buttons {
     padding-right: 2rem;
   }
 }

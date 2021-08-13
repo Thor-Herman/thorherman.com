@@ -15,7 +15,7 @@ const ProjectModalBody = ({
 }) => {
   const history = useHistory();
   return (
-    <div className="modal">
+    <div className="modal flex-vertical">
       <div className="modal-grid">
         <div className="modal-first-column">
           <div className="image-container">
