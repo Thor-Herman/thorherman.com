@@ -17,7 +17,6 @@ const ProjectsSection = () => {
           url="khabu"
           description="Real-time multiplayer card game made in React and Spring-Boot."
           image={Khabu}
-          playableLink={'khabu.eu-north-1.elasticbeanstalk.com/'}
         />
         <ProjectCard
           title="Galaxy Shooter"
