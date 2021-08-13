@@ -48,6 +48,7 @@
 }
 
 .modal-title h1 {
+  padding-top: 4rem;
   padding-right: 5rem; /* To leave space for the icon button to the right */
   word-wrap: break-word;
 }
@@ -109,6 +110,7 @@
   }
 
   .modal-title h1 {
+    padding-top: 0 !important;
     padding-right: 0 !important;
   }
 
@@ -119,7 +121,7 @@
 
   .modal .technologies,
   .modal-second-column {
-    padding: 0 2rem;
+    padding: 1rem 2rem;
   }
 
   .modal-description {
