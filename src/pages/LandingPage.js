@@ -9,7 +9,7 @@ const LandingPage = () => {
   return (
     <>
       <NavBar
-        sectionNames={['Home', 'About', 'Experience', 'Projects', 'Contact']}
+        sectionNames={['Home', 'Projects', 'Contact']}
       />
       <LandingSection />
       <ProjectsSection />
