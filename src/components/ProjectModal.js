@@ -7,36 +7,29 @@ import { useHistory, useParams } from 'react-router-dom';
 import client from '../api/sanityClient';
 import CircularProjectImage from './CircularProjectImage';
 
-const ProjectModal = ({ active }) => {
+const ProjectModal = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [title, setTitle] = useState('');
-  const [descriptionBlocks, setDescriptionBlocks] = useState([]);
-  const [URL, setURL] = useState(['']);
-  const [technologies, setTechnologies] = useState([]);
-  const [image, setImage] = useState('');
+  const [data, setData] = useState(null);
 
   const history = useHistory();
-
   const { id } = useParams();
 
   useEffect(() => {
     setIsLoading(true);
     const query =
-      "*[_type == 'project' && slug.current == $id] {name, \"imageUrl\": image.asset->url, description, technologies, URL}";
+      '*[_type == \'project\' && slug.current == $id] {name, \'imageUrl\': image.asset->url, description, technologies, githubURL, playURL, playable}';
     const params = { id };
     client.fetch(query, params).then((result) => {
-      setTitle(result[0].name);
-      setDescriptionBlocks(result[0].description);
-      setTechnologies(result[0].technologies);
-      setURL(result[0].URL);
-      setImage(result[0].imageUrl)
+      setData(result[0]);
     });
     setIsLoading(false);
   }, [id]);
 
-  if (!id || isLoading) return null;
+  if (!id || isLoading || ! data ) return null;
 
-  const description = descriptionBlocks.map((block) => (
+  const { name, imageUrl, description, technologies, githubURL, playURL, playable } = data;
+
+  const descriptionJSX = description.map((block) => (
     <p>
       {block.children[0].text} <br />
       <br />
@@ -48,7 +41,7 @@ const ProjectModal = ({ active }) => {
       <div className="modal">
         <div className="">
           <div className="image-container">
-            <CircularProjectImage image={image} />
+            <CircularProjectImage image={imageUrl} />
           </div>
           <div className="technologies">
             <h4 className="underline">Technologies</h4>
@@ -60,15 +53,17 @@ const ProjectModal = ({ active }) => {
           </div>
         </div>
         <div className="modal-second-column">
-          <h1 className="bold">{title}</h1>
-          <p className="modal-description">{description}</p>
+          <h1 className="bold">{name}</h1>
+          <p className="modal-description">{descriptionJSX}</p>
           <div className="modal-buttons flex">
-            <Button text="Github Repo" link={URL} color="none" type="underline" />
-            <Button
-              text="Play Now"
-              link="http://www.thorherman.com/play.html"
-              color="green"
-            />
+            <Button text="Github Repo" link={githubURL} color="none" type="underline" />
+            {playable && (
+              <Button
+                text="Play Now"
+                link={playURL}
+                color="green"
+              />
+            )}
           </div>
         </div>
         <IconButton type="close" size="large" onClick={() => history.push('/')} />
