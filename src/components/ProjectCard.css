@@ -13,39 +13,43 @@
 }
 
 .project-card .info {
-  position: relative; /* Because button is absolutely positioned from this container */
-  display: block;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.project-card .info > * {
+  padding-left: 5rem;
+}
+
+.project-card .text {
+  padding-top: 5rem;
+    padding-right: 5rem;
+  max-width: 90%;
 }
 
 .project-card:nth-child(even) .info {
   order: 2;
 }
 
-.project-card .text {
-  padding: 0 2.5em;
-  margin: 15% 0;
-}
-
-.project-card h3 {
-  font-size: 2em;
-}
-
 .project-card p {
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
 }
 
 .project-card .button-container {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
-
-  padding-block: 3rem;
+  padding-bottom: 5rem;
   width: 100%;
 }
 
 .button-container .button {
   width: 100%;
   max-width: 10rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
 }
 
 .project-card img {
