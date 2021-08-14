@@ -21,11 +21,11 @@
   width: 100%;
   border-top: 0.1em solid var(--light-blue-color);
   content: '';
-  animation-name: slidein;
+  animation-name: bluebar-slidein;
   animation-duration: 1s;
 }
 
-@keyframes slidein {
+@keyframes bluebar-slidein {
   from {
     width: 0%;
   }
