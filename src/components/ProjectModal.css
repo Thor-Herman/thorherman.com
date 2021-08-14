@@ -19,7 +19,7 @@
   animation: 0.45s ease-out 0s 1 slidein;
   width: 60rem;
   height: 50rem;
-  background-color: #030013;
+  background-color: var(--dark-blue-color);
   overflow-y: auto;
   justify-content: space-between;
 }
