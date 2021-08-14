@@ -5,24 +5,25 @@ import client from '../api/sanityClient';
 import ProjectModalBody from './ProjectModalBody';
 
 const ProjectModal = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [loadTime, setLoadTime] = useState(0);
   const [data, setData] = useState(null);
 
   // @ts-ignore
   const { id } = useParams();
 
   useEffect(() => {
-    setIsLoading(true);
+    const loadTimeId = setInterval(() => {
+      setLoadTime((load) => load + 500);
+    }, 500);
     const query =
       "*[_type == 'project' && slug.current == $id] {name, 'imageUrl': image.asset->url, description, technologies, githubURL, playURL, playable}";
     const params = { id };
-    client.fetch(query, params).then((result) => {
-      setData(result[0]);
-    });
-    setIsLoading(false);
+    client.fetch(query, params).then((result) => setData(result[0]));
+    clearInterval(loadTimeId);
+    setLoadTime(0);
   }, [id]);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (loadTime > 1000) return <p className="loading-message">Loading...</p>;
   if (!id || !data) return null;
 
   const { name, imageUrl, description, technologies, githubURL, playURL, playable } =
