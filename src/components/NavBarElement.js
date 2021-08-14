@@ -10,9 +10,6 @@ function NavBarElement(props) {
       <ReactScrollLink
         to={props.sectionName.toLowerCase() + '-section'}
         smooth={true}
-        onClick={() => {
-          props.onClick(props.sectionName);
-        }}
         className={"pointer-hover"}
       >
         {_.capitalize(props.sectionName)}

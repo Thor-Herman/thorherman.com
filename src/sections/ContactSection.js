@@ -9,7 +9,7 @@ import './ContactSection.css';
 
 const ContactSection = () => {
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="contact-section">
       <p className="section-title">Contact</p>
       <div className="icons-container">
         <ContactIcon link="https://github.com/Thor-Herman">

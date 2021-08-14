@@ -9,7 +9,7 @@ import ProjectModal from '../components/ProjectModal';
 
 const ProjectsSection = () => {
   return (
-    <section className="projects-section" id="projects-section">
+    <section className="projects-section" id="projects-section" >
       <p className="section-title">Personal Projects</p>
       <div className="projects">
         <ProjectCard
