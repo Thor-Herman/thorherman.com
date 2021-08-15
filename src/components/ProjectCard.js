@@ -17,7 +17,9 @@ const ProjectCard = ({ url, title, description, image, playableLink }) => {
             <Button color="grey" text="Read More" type="outlined" />
           </Link>
           {playableLink && (
-            <Button color="green" text="Play Now" link={playableLink} />
+            <Link to={playableLink}>
+              <Button color="green" text="Play Now" />
+            </Link>
           )}
         </div>
       </div>
