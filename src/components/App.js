@@ -1,25 +1,20 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import client from '../api/sanityClient';
+import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
 import LandingPage from '../pages/LandingPage';
-import Unity, { UnityContent } from 'react-unity-webgl';
 
 import './App.css';
-import ProjectModal from './ProjectModal';
+import UnityPlayer from './UnityPlayer';
 
 const App = () => {
-  const unityContent = new UnityContent('/build/build.json', '/build/loader.js');
   return (
     <div className="App">
       <BrowserRouter>
-      <Switch>
         <Route path="/play">
-          <Unity unityContent={unityContent} />
+          <UnityPlayer />
         </Route>
         <Route path="/">
           <LandingPage />
         </Route>
-      </Switch>
       </BrowserRouter>
     </div>
   );

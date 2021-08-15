@@ -1,0 +1,15 @@
+.unity .icon-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 105;
+}
+
+.unity-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  z-index: 105;
+}
