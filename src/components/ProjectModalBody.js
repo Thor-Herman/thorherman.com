@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Button from './Button';
 import CircularProjectImage from './CircularProjectImage';
 import IconButton from './IconButton';
@@ -28,7 +28,11 @@ const ProjectModalBody = ({
         </div>
         <div className="modal-second-column">
           <div className="modal-title flex-vertical">
-            <IconButton type="close" size="large" onClick={() => history.push('/')} />
+            <IconButton
+              type="close"
+              size="large"
+              onClick={() => history.push('/')}
+            />
             <h1 className="bold">{name}</h1>
           </div>
           <p className="modal-description">{descriptionJSX}</p>
@@ -36,7 +40,11 @@ const ProjectModalBody = ({
       </div>
       <div className="modal-buttons flex">
         <Button text="Github Repo" link={githubURL} color="none" type="underline" />
-        {playable && <Button text="Play Now" link={playURL} color="green" />}
+        {playable && (
+          <Link to={playURL}>
+            <Button color="green" text="Play Now" />
+          </Link>
+        )}
       </div>
     </div>
   );
