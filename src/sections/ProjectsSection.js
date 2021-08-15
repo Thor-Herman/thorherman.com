@@ -23,7 +23,7 @@ const ProjectsSection = () => {
           url="galaxy-shooter"
           description="2D Unity project based on a Udemy course"
           image={GalaxyShooter}
-          playableLink={'http://www.thorherman.com/play'}
+          playableLink={'/play'}
         />
         <ProjectCard
           title="This Page"
