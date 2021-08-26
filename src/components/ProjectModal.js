@@ -16,7 +16,7 @@ const ProjectModal = () => {
       setLoadTime((load) => load + 500);
     }, 500);
     const query =
-      "*[_type == 'project' && slug.current == $id] {name, 'imageUrl': image.asset->url, description, technologies, githubURL, playURL, playable}";
+      "*[_type == 'project' && slug.current == $id] {name, 'imageUrl': image.asset->url, description, technologies, githubURL, playURL, externalLink}";
     const params = { id };
     client.fetch(query, params).then((result) => setData(result[0]));
     clearInterval(loadTimeId);
@@ -26,7 +26,7 @@ const ProjectModal = () => {
   if (loadTime > 1000) return <p className="loading-message">Loading...</p>;
   if (!id || !data) return null;
 
-  const { name, imageUrl, description, technologies, githubURL, playURL, playable } =
+  const { name, imageUrl, description, technologies, githubURL, playURL, externalLink } =
     data;
   const descriptionJSX = description.map((block) => (
     <p>
@@ -44,7 +44,7 @@ const ProjectModal = () => {
       githubURL={githubURL}
       descriptionJSX={descriptionJSX}
       playURL={playURL}
-      playable={playable}
+      externalLink={externalLink}
     />
   );
 };

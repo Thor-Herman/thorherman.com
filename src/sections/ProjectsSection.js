@@ -17,6 +17,8 @@ const ProjectsSection = () => {
           url="khabu"
           description="Real-time multiplayer card game made in React and Spring-Boot."
           image={Khabu}
+          playableLink={'https://khabu.azurewebsites.net'}
+          external={true}
         />
         <ProjectCard
           title="Galaxy Shooter"

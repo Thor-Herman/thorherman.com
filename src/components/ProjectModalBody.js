@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import Button from './Button';
 import CircularProjectImage from './CircularProjectImage';
 import IconButton from './IconButton';
+import PlayButton from './PlayButton';
 
 const ProjectModalBody = ({
   imageUrl,
@@ -10,7 +11,7 @@ const ProjectModalBody = ({
   name,
   descriptionJSX,
   githubURL,
-  playable,
+  externalLink,
   playURL,
 }) => {
   const history = useHistory();
@@ -40,11 +41,7 @@ const ProjectModalBody = ({
       </div>
       <div className="modal-buttons flex">
         <Button text="Github Repo" link={githubURL} color="none" type="underline" />
-        {playable && (
-          <Link to={playURL}>
-            <Button color="green" text="Play Now" />
-          </Link>
-        )}
+        <PlayButton playableLink={playURL} external={externalLink} />
       </div>
     </div>
   );
