@@ -131,6 +131,7 @@
 
   .modal-description {
     height: auto;
+    max-height: none; /* Remove scroll on mobile */
     padding: 0 !important;
   }
 
