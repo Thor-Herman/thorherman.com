@@ -11,12 +11,19 @@ const ProjectModal = () => {
   // @ts-ignore
   const { id } = useParams();
 
+  useEffect(() => { // Remove outer scrollbar
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'auto';
+    }
+  })
+
   useEffect(() => {
     const loadTimeId = setInterval(() => {
       setLoadTime((load) => load + 500);
     }, 500);
     const query =
-      "*[_type == 'project' && slug.current == $id] {name, 'imageUrl': image.asset->url, description, technologies, githubURL, playURL, externalLink}";
+      "*[_type == 'project' && slug.current == $id] {name, 'imageUrl': image.asset->url, description, technologies, githubURL, playURL, externalLink, iFrameURL}";
     const params = { id };
     client.fetch(query, params).then((result) => setData(result[0]));
     clearInterval(loadTimeId);
@@ -26,10 +33,18 @@ const ProjectModal = () => {
   if (loadTime > 1000) return <p className="loading-message">Loading...</p>;
   if (!id || !data) return null;
 
-  const { name, imageUrl, description, technologies, githubURL, playURL, externalLink } =
-    data;
+  const {
+    name,
+    imageUrl,
+    description,
+    technologies,
+    githubURL,
+    playURL,
+    externalLink,
+    iFrameURL,
+  } = data;
   const descriptionJSX = description.map((block) => (
-    <p>
+    <p key={block.children[0].text}>
       {block.children[0].text} <br />
       <br />
     </p>
@@ -45,6 +60,7 @@ const ProjectModal = () => {
       descriptionJSX={descriptionJSX}
       playURL={playURL}
       externalLink={externalLink}
+      iFrameURL={iFrameURL}
     />
   );
 };

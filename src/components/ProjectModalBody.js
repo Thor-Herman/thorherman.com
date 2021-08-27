@@ -4,6 +4,7 @@ import Button from './Button';
 import CircularProjectImage from './CircularProjectImage';
 import IconButton from './IconButton';
 import PlayButton from './PlayButton';
+import VideoPlayer from './VideoPlayer';
 
 const ProjectModalBody = ({
   imageUrl,
@@ -13,6 +14,7 @@ const ProjectModalBody = ({
   githubURL,
   externalLink,
   playURL,
+  iFrameURL,
 }) => {
   const history = useHistory();
   return (
@@ -36,7 +38,10 @@ const ProjectModalBody = ({
             />
             <h1 className="bold">{name}</h1>
           </div>
-          <p className="modal-description">{descriptionJSX}</p>
+          <p className="modal-description">
+            {descriptionJSX}
+            {iFrameURL && <VideoPlayer src={iFrameURL} />}
+          </p>
         </div>
       </div>
       <div className="modal-buttons flex">

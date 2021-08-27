@@ -8,7 +8,8 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
-.loading-message, .modal {
+.loading-message,
+.modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -20,7 +21,6 @@
   width: 60rem;
   height: 50rem;
   background-color: var(--dark-blue-color);
-  overflow-y: auto;
   justify-content: space-between;
 }
 
@@ -41,6 +41,7 @@
 .modal-description {
   overflow-y: auto;
   max-width: 100%;
+  max-height: 35rem;
   padding-right: 6rem;
 }
 
@@ -110,6 +111,7 @@
 
   .modal {
     animation: none !important;
+    overflow-y: auto;
   }
 
   .modal-title h1 {
