@@ -9,6 +9,7 @@ const VideoPlayer = ({ src }) => {
           src={src}
           frameBorder={0}
           scrolling="no"
+          allow="fullscreen"
         />
       
   </div>);
