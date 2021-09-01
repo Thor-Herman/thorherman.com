@@ -3,13 +3,13 @@ import ProjectCard from '../components/ProjectCard';
 import Khabu from '../assets/khabu.png';
 import GalaxyShooter from '../assets/galaxy-shooter.png';
 import ThorHerman from '../assets/thorherman.com.png';
+import Slackbar from '../assets/Slackbar.png';
 
 import './ProjectsSection.css';
-import ProjectModal from '../components/ProjectModal';
 
 const ProjectsSection = () => {
   return (
-    <section className="projects-section" id="projects-section" >
+    <section className="projects-section" id="projects-section">
       <p className="section-title">Personal Projects</p>
       <div className="projects">
         <ProjectCard
@@ -25,13 +25,20 @@ const ProjectsSection = () => {
           url="galaxy-shooter"
           description="2D Unity project based on a Udemy course"
           image={GalaxyShooter}
-          playableLink={'/play'}
+          playableLink={'/play/4395585'}
         />
         <ProjectCard
           title="This Page"
           url="website"
           description="You're on it right now!"
           image={ThorHerman}
+        />
+        <ProjectCard
+          title="Elzar Escape"
+          url="elzar-escape"
+          description="3D On-rails-shooter"
+          image={Slackbar}
+          playableLink={'/play/4395427'}
         />
       </div>
     </section>
