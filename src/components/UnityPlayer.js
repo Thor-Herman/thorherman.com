@@ -9,6 +9,12 @@ const UnityPlayer = () => {
   useHideScrollbar();
   const { id } = useParams();
   const history = useHistory();
+  const isMobileUserAgent =
+    'ontouchstart' in document.documentElement && /mobi/i.test(navigator.userAgent);
+  if (isMobileUserAgent) {
+     history.push('/');
+     return null;
+  };
   return (
     <div className="project-modal-bg">
       <div className="modal unity">

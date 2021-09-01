@@ -6,7 +6,7 @@ const PlayButton = ({ playableLink, external }) => {
   if (!playableLink) return null;
   if (external) return <Button color="green" text="Play Now" link={playableLink} />;
   return (
-    <Link to={playableLink}>
+    <Link className="play-button" to={playableLink}>
       <Button color="green" text="Play Now" />
     </Link>
   );

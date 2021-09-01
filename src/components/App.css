@@ -159,6 +159,10 @@ h4 {
   .project-card .project-image {
     border-radius: 1.5rem 1.5rem 0 0 !important;
   }
+
+  .play-button {
+    display: none; /* Can't play on mobile */
+  }
 }
 
 /* --------------- FONTS ---------- */
