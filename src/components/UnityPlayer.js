@@ -1,38 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React from 'react';
+import { useHistory, useParams } from 'react-router-dom';
 import IconButton from './IconButton';
-import Unity, { UnityContent } from 'react-unity-webgl';
-
+import VideoPlayer from './VideoPlayer';
 import './UnityPlayer.css';
-const unityContent = new UnityContent('/build/build.json', '/build/loader.js');
 
 const UnityPlayer = () => {
-  const [progression, setProgression] = useState(0);
+  const { id } = useParams();
   const history = useHistory();
-
-  useEffect(() => {
-    unityContent.on('progress', (progression) => {
-      setProgression(progression);
-    });
-  }, []);
-
-  console.log(progression);
-
-  const loading =
-    progression < 1 ? (
-      <div className="unity-loader">
-        <p>
-          Loading... {Math.round(progression * 100)} percent
-        </p>
-      </div>
-    ) : null;
-
   return (
     <div className="project-modal-bg">
       <div className="modal unity">
+        <p className="fullscreen-text">Press f for fullscreen</p>
         <IconButton type="close" size="large" onClick={() => history.push('/')} />
-        {loading}
-        <Unity unityContent={unityContent} />
+        <VideoPlayer src={`https://itch.io/embed-upload/${id}?color=333333`} />
       </div>
     </div>
   );

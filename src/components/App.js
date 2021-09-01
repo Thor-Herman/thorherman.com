@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <Route path="/play">
+        <Route path="/play/:id">
           <UnityPlayer />
         </Route>
         <Route path="/">
