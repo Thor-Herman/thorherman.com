@@ -3,6 +3,7 @@ import './ProjectModal.css';
 import { useParams } from 'react-router-dom';
 import client from '../api/sanityClient';
 import ProjectModalBody from './ProjectModalBody';
+import useHideScrollbar from './useHideScrollbar';
 
 const ProjectModal = () => {
   const [loadTime, setLoadTime] = useState(0);
@@ -10,13 +11,8 @@ const ProjectModal = () => {
 
   // @ts-ignore
   const { id } = useParams();
+  useHideScrollbar();
 
-  useEffect(() => { // Remove outer scrollbar
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = 'auto';
-    }
-  })
 
   useEffect(() => {
     const loadTimeId = setInterval(() => {
@@ -29,6 +25,8 @@ const ProjectModal = () => {
     clearInterval(loadTimeId);
     setLoadTime(0);
   }, [id]);
+
+  console.log()
 
   if (loadTime > 1000) return <p className="loading-message">Loading...</p>;
   if (!id || !data) return null;

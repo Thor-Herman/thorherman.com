@@ -3,8 +3,10 @@ import { useHistory, useParams } from 'react-router-dom';
 import IconButton from './IconButton';
 import VideoPlayer from './VideoPlayer';
 import './UnityPlayer.css';
+import useHideScrollbar from './useHideScrollbar';
 
 const UnityPlayer = () => {
+  useHideScrollbar();
   const { id } = useParams();
   const history = useHistory();
   return (
